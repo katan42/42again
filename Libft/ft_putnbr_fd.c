@@ -1,37 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ka-tan <ka-tan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/16 13:39:22 by ka-tan            #+#    #+#             */
-/*   Updated: 2025/05/16 18:18:49 by ka-tan           ###   ########.fr       */
+/*   Created: 2025/05/16 21:16:39 by ka-tan            #+#    #+#             */
+/*   Updated: 2025/05/16 21:16:43 by ka-tan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "libft.h"
 
-int	ft_isascii(int c)
+void	ft_putnbr_fd(int n, int fd)
 {
-	if (c >= 0 && c <= 127)
+	if (n == -2147483648)
 	{
-		return (1);
+		write(fd, "-2147483648", 11);
+		return ;
 	}
-	return (0);
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		n = -n;
+	}
+	if (n >= 10)
+	{
+		ft_putnbr_fd(n / 10, fd);
+	}
+	ft_putchar_fd((n % 10) + '0', fd);
 }
 /*
-int	main(void)
+int main(void)
 {
-	char	a = 'a';
-	char	b = '1';
-	char	c = '#';
-	char	d = '*';
-	char	e = 'ê';
+	int	x;
 
-	printf("a: %d\n", ft_isascii(a));
-	printf("1: %d\n", ft_isascii(b));
-	printf("#: %d\n", ft_isascii(c));
-	printf("*: %d\n", ft_isascii(d));
-	printf("ê: %d\n", ft_isascii(e));
-}*/
+	x = -12345;
+	ft_putnbr_fd(x, 1);
+	return (0);
+}
+*/

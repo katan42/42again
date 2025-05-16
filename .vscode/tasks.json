@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Build current file to a.out",
+        "type": "shell",
+        "command": "cc",
+        "args": [
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "${file}",
+          "-o",
+          "${fileDirname}/a.out"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": ["$gcc"]
+      },
+      {
+        "label": "Run a.out",
+        "type": "shell",
+        "command": "./a.out",
+        "options": {
+        "cwd": "${fileDirname}"
+        },
+        "group": {
+          "kind": "test",
+          "isDefault": true
+        },
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "shared"
+        }
+      }
+    ]
+  }

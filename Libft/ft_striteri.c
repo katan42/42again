@@ -1,37 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ka-tan <ka-tan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/16 13:39:22 by ka-tan            #+#    #+#             */
-/*   Updated: 2025/05/16 18:18:49 by ka-tan           ###   ########.fr       */
+/*   Created: 2025/05/16 21:14:58 by ka-tan            #+#    #+#             */
+/*   Updated: 2025/05/16 21:15:14 by ka-tan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	if (c >= 0 && c <= 127)
+	unsigned int	i;
+
+	i = 0;
+	while (s[i] != '\0')
 	{
-		return (1);
+		f(i, s + i);
+		i++;
 	}
-	return (0);
 }
 /*
+#include <ctype.h>
+
+void	convert_case(unsigned int index, char *c)
+{
+	if (index == 0)
+	{
+		*c = ft_toupper(*c);
+	}
+	else
+	{
+		*c = ft_tolower(*c);
+	}
+}
+
 int	main(void)
 {
-	char	a = 'a';
-	char	b = '1';
-	char	c = '#';
-	char	d = '*';
-	char	e = 'ê';
+	char	text[] = "hello WoRlD how aRe You";
 
-	printf("a: %d\n", ft_isascii(a));
-	printf("1: %d\n", ft_isascii(b));
-	printf("#: %d\n", ft_isascii(c));
-	printf("*: %d\n", ft_isascii(d));
-	printf("ê: %d\n", ft_isascii(e));
-}*/
+	printf("Original: %s\n", text);
+	ft_striteri(text, &convert_case);
+	printf("Converted: %s\n", text);
+	return (0);
+}
+*/
