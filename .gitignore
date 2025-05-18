@@ -1,0 +1,6 @@
+# Ignore all VS Code files
+.vscode/
+
+# Ignore compiled files
+*.o
+a.out
