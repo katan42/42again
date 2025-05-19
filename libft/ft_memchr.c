@@ -6,11 +6,9 @@
 /*   By: ka-tan <ka-tan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 17:42:51 by ka-tan            #+#    #+#             */
-/*   Updated: 2025/05/16 20:12:09 by ka-tan           ###   ########.fr       */
+/*   Updated: 2025/05/19 19:23:36 by ka-tan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 #include "libft.h"
 
@@ -32,15 +30,17 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 
-//The  memchr()  function  scans  the initial n bytes of the memory area pointed to by s for the first instance of c.  Both c and the bytes of the memory area pointed to by s are interpreted as unsigned char.
-int main(void)
-{
-	const char *str = "Hiello, worldeeeeeei!";
-	char *ptr = ft_memchr(str, 'i', 15);
+// //The  memchr()  function  scans  the initial n bytes of the memory area
+//pointed to by s for the first instance of c.  Both c and the bytes 
+//of the memory area pointed to by s are interpreted as unsigned char.
+// int main(void)
+// {
+// 	const char *str = "Hiello, worldeeeeeei!";
+// 	char *ptr = ft_memchr(str, 'i', 15);
 
-    if(ptr)
-    	printf("ft_memchr\nFound character 'i' at position: %ld\n", ptr-str+1);
-	else
-        printf("Character not found within 'n' bytes\n");
-    return (0);
-}
+//     if(ptr)
+//     	printf("ft_memchr\nFound character 'i' at position: %ld\n", ptr-str+1);
+// 	else
+//         printf("Character not found within 'n' bytes\n");
+//     return (0);
+// }

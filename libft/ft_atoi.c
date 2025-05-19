@@ -6,7 +6,7 @@
 /*   By: ka-tan <ka-tan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 13:26:54 by ka-tan            #+#    #+#             */
-/*   Updated: 2025/05/16 13:32:24 by ka-tan           ###   ########.fr       */
+/*   Updated: 2025/05/19 19:24:44 by ka-tan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ int	ft_atoi(const char *str)
 	}
 	return (sign * result);
 }
-
 // int	main(void)
 // {
 // 	char	str1[] = "     123";
@@ -45,7 +44,7 @@ int	ft_atoi(const char *str)
 // 	char	str4[] = "+789";
 //     char	str5[] = "+++--8987";
 //     char	str6[] = "4547545+-+-";
-	
+
 // 	printf("      123: %d\n", ft_atoi(str1));
 //     printf("      123: %d\n", atoi(str1));
 // 	printf("-456: %d\n", ft_atoi(str2));
