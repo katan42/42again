@@ -6,7 +6,7 @@
 /*   By: ka-tan <ka-tan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 20:53:23 by ka-tan            #+#    #+#             */
-/*   Updated: 2025/06/03 17:10:12 by ka-tan           ###   ########.fr       */
+/*   Updated: 2025/06/06 23:00:34 by ka-tan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 // 	t_list	*head = ft_lstnew(a);
 // 	t_list	*first = ft_lstnew(b);
 // 	t_list	*second = ft_lstnew(c);
-	
+
 // 	head->next = first;
 // 	first->next = second;
 
