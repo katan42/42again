@@ -6,7 +6,7 @@
 /*   By: ka-tan <ka-tan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 21:14:23 by ka-tan            #+#    #+#             */
-/*   Updated: 2025/05/19 19:20:28 by ka-tan           ###   ########.fr       */
+/*   Updated: 2025/06/10 21:10:13 by ka-tan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,23 +57,19 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-/*
-int	main(void) 
-{
-	// Integer to String
-	int num = -2147483648;
-	char* str = ft_itoa(num);
-	if (str)
-	{
-    	printf("itoa: %d -> %s\n", num, str);
-    } 
-	else
-	{
-    	printf("Memory allocation failed!\n");
-	}
-    // Freeing allocated memory for the string
-	free(str);
 
-	return (0);
-}
-*/
+// int	main(void) 
+// {
+// 	int num = -2147483648;
+// 	char* str = ft_itoa(num);
+// 	if (str)
+// 	{
+//     	printf("itoa: %d -> %s\n", num, str);
+//     } 
+// 	else
+// 	{
+//     	printf("Memory allocation failed!\n");
+// 	}
+// 	free(str);
+// 	return (0);
+// }

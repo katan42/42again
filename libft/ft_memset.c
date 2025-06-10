@@ -6,7 +6,7 @@
 /*   By: ka-tan <ka-tan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 13:39:28 by ka-tan            #+#    #+#             */
-/*   Updated: 2025/05/16 20:33:47 by ka-tan           ###   ########.fr       */
+/*   Updated: 2025/06/10 15:25:14 by ka-tan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,12 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-/*
-int main(void)
-{
-	char	str[] = "Let's go HOME";
 
-	printf("before memset %s\n", str);
-	ft_memset(str,'d', 5);
-	printf("after memset %s\n", str);
-}
-*/
+// int main(void)
+// {
+// 	char	str[] = "Let's go HOME";
+
+// 	printf("before memset %s\n", str);
+// 	ft_memset(str,'d', 5);
+// 	printf("after memset %s\n", str);
+// }

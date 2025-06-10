@@ -6,7 +6,7 @@
 /*   By: ka-tan <ka-tan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 17:42:58 by ka-tan            #+#    #+#             */
-/*   Updated: 2025/05/16 20:33:08 by ka-tan           ###   ########.fr       */
+/*   Updated: 2025/06/10 21:25:54 by ka-tan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,26 +31,25 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-/*
-int	main (void)
-{
-	unsigned char array1[] = { 0x01, 0x02, 0x03, 0x04, 0x05 };
-	unsigned char array2[] = { 0x01, 0x02, 0x03, 0x04, 0x06 };
-	size_t numBytes = sizeof(array1);
-	int result = ft_memcmp(array1, array2, numBytes);
 
-	if (result == 0)
-	{
-		printf("The arrays are equal.\n");
-	}
-	else if (result < 0)
-	{
-		printf("array1 is less than array2.\n");
-	}
-	else
-	{
-		printf("array1 is greater than array2.\n");
-	}
-	return (0);
-}
-*/
+// int	main (void)
+// {
+// 	unsigned char array1[] = { 0x01, 0x02, 0x03, 0x04, 0x05 };
+// 	unsigned char array2[] = { 0x01, 0x02, 0x03, 0x04, 0x06 };
+// 	size_t numBytes = sizeof(array1);
+// 	int result = ft_memcmp(array1, array2, numBytes);
+
+// 	if (result == 0)
+// 	{
+// 		printf("The arrays are equal.\n");
+// 	}
+// 	else if (result < 0)
+// 	{
+// 		printf("array1 is less than array2.\n");
+// 	}
+// 	else
+// 	{
+// 		printf("array1 is greater than array2.\n");
+// 	}
+// 	return (0);
+// }

@@ -6,7 +6,7 @@
 /*   By: ka-tan <ka-tan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 13:39:22 by ka-tan            #+#    #+#             */
-/*   Updated: 2025/05/16 18:18:49 by ka-tan           ###   ########.fr       */
+/*   Updated: 2025/06/10 20:57:42 by ka-tan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +20,17 @@ int	ft_isascii(int c)
 	}
 	return (0);
 }
-/*
-int	main(void)
-{
-	char	a = 'a';
-	char	b = '1';
-	char	c = '#';
-	char	d = '*';
-	char	e = 'ê';
 
-	printf("a: %d\n", ft_isascii(a));
-	printf("1: %d\n", ft_isascii(b));
-	printf("#: %d\n", ft_isascii(c));
-	printf("*: %d\n", ft_isascii(d));
-	printf("ê: %d\n", ft_isascii(e));
-}*/
+// int	main(void)
+// {
+// 	char	a = 'a';
+// 	char	b = '1';
+// 	char	c = '#';
+// 	char	d = '*';
+
+// 	printf("a: %d\n", ft_isascii(a));
+// 	printf("1: %d\n", ft_isascii(b));
+// 	printf("#: %d\n", ft_isascii(c));
+// 	printf("*: %d\n", ft_isascii(d));
+// 	printf("non-ascii: %d\n", ft_isascii(128));
+// }
