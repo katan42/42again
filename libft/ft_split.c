@@ -6,15 +6,15 @@
 /*   By: ka-tan <ka-tan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 21:13:50 by ka-tan            #+#    #+#             */
-/*   Updated: 2025/05/16 21:13:56 by ka-tan           ###   ########.fr       */
+/*   Updated: 2025/06/15 18:25:59 by ka-tan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static unsigned int	wordcount(char *s, char c)
+static size_t	wordcount(char *s, char c)
 {
-	int	count;
+	size_t	count;
 
 	count = 0;
 	while (*s)
@@ -29,7 +29,7 @@ static unsigned int	wordcount(char *s, char c)
 	return (count);
 }
 
-static char	*alloc_mem_word(char *s1, char c, unsigned int len)
+static char	*alloc_mem_word(char *s1, char c, size_t len)
 {
 	char	*s2;
 
@@ -42,9 +42,9 @@ static char	*alloc_mem_word(char *s1, char c, unsigned int len)
 	return (s2);
 }
 
-static char	**free_dptr(char **dptr, unsigned int j)
+static char	**free_dptr(char **dptr, size_t j)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (i <= j)
@@ -53,10 +53,10 @@ static char	**free_dptr(char **dptr, unsigned int j)
 	return (NULL);
 }
 
-static int	copystr(char **dptr, char *s1, char c, unsigned int *j)
+static int	copystr(char **dptr, char *s1, char c, size_t *j)
 {
-	unsigned int	len;
-	unsigned int	i;
+	size_t	len;
+	size_t	i;
 
 	len = ft_strlen(s1);
 	while (*s1)
@@ -84,7 +84,7 @@ char	**ft_split(char const *s, char c)
 	char			**dptr;
 	char			**head;
 	char			*s1;
-	unsigned int	j;
+	size_t			j;
 
 	s1 = (char *)s;
 	j = 0;
@@ -96,30 +96,31 @@ char	**ft_split(char const *s, char c)
 		return (free_dptr(dptr, j));
 	return (head);
 }
-/*
-int main(void)
-{
-    char **result;
-    char *str = "hello world this is ft_split finally!";
-    char delimiter = ' ';
-    int i;
 
-    result = ft_split(str, delimiter);
+// int main(void)
+// {
+// 	char **result;
+// 	char *str = "hello world this is ft_split finally!";
+// 	char delimiter = ' ';
+// 	int i;
 
-    if (result)
-    {
-        for (i = 0; result[i] != NULL; i++)
-        {
-            printf("Word %d: %s\n", i + 1, result[i]);
-            free(result[i]);  // Free the mem for each word
-        }
-        free(result);  // Free the pointers
-    }
-    else
-    {
-        printf("Memory allocation failed or no words found.\n");
-    }
+// 	result = ft_split(str, delimiter);
 
-    return 0;
-}
-*/
+// 	if (result)
+// 	{
+// 		i = 0;
+// 		while (result[i] != NULL)
+// 		{
+// 			printf("Word %d: %s\n", i + 1, result[i]);
+// 			free(result[i]);
+// 			i++;
+// 		}
+// 		free(result);
+// 	}
+// 	else
+// 	{
+// 		printf("Memory allocation failed or no words found.\n");
+// 	}
+
+// 	return 0;
+// }

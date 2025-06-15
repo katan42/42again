@@ -6,7 +6,7 @@
 /*   By: ka-tan <ka-tan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 13:42:06 by ka-tan            #+#    #+#             */
-/*   Updated: 2025/06/10 19:56:51 by ka-tan           ###   ########.fr       */
+/*   Updated: 2025/06/12 17:56:32 by ka-tan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,24 +50,23 @@ size_t	ft_strlcat(char *dest, const char *src, size_t n)
 // }
 // not required in manual to guard against non-nullterminated
 // but matches behaviour of real strlcat() on systems like BSD
+// #include <string.h>
+// #include <bsd/string.h>
 
-#include <string.h>
-#include <bsd/string.h>
+// int	main(void)
+// {
+// 	char *dest = malloc(15);
+// 	if (!dest)
+// 		return (1);
 
-int	main(void)
-{
-	char *dest = malloc(15);
-	if (!dest)
-		return (1);
+// 	memset(dest, 'r', 15);
+// 	size_t result = ft_strlcat(dest, "lorem ipsum dolor sit amet", 0);
 
-	memset(dest, 'r', 15);
-	size_t result = ft_strlcat(dest, "lorem ipsum dolor sit amet", 0);
+// 	printf("Return value: %zu\n", result);
+// 	write(1, "Final dest: ", 12);
+// 	write(1, dest, 15);
+// 	write(1, "\n", 1);
 
-	printf("Return value: %zu\n", result);
-	write(1, "Final dest: ", 12);
-	write(1, dest, 15);
-	write(1, "\n", 1);
-
-	free(dest);
-	return (0);
-}
+// 	free(dest);
+// 	return (0);
+// }

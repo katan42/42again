@@ -6,7 +6,7 @@
 /*   By: ka-tan <ka-tan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 17:42:51 by ka-tan            #+#    #+#             */
-/*   Updated: 2025/06/10 21:10:57 by ka-tan           ###   ########.fr       */
+/*   Updated: 2025/06/12 19:13:59 by ka-tan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 // 	const char *str = "Hiello, worldeeeeeei!";
 // 	char *ptr = ft_memchr(str, 'i', 15);
 
-//     if(ptr)
-//     	printf("ft_memchr\nFound character 'i' at position: %ld\n", ptr-str+1);
+// 	if(ptr)
+// 		printf("ft_memchr\nFound character 'i' at position: %ld\n", ptr-str+1);
 // 	else
-//         printf("Character not found within 'n' bytes\n");
-//     return (0);
+// 		printf("Character not found within 'n' bytes\n");
+// 	return (0);
 // }

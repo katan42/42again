@@ -6,7 +6,7 @@
 /*   By: ka-tan <ka-tan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 20:53:42 by ka-tan            #+#    #+#             */
-/*   Updated: 2025/06/06 22:59:50 by ka-tan           ###   ########.fr       */
+/*   Updated: 2025/06/15 19:18:05 by ka-tan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,12 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_list;
 	t_list	*new_node;
+	t_list	*last_node;
 
 	if (!lst || !f)
 		return (NULL);
 	new_list = NULL;
+	last_node = NULL;
 	while (lst)
 	{
 		new_node = ft_lstnew(f(lst->content));
@@ -28,7 +30,11 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			ft_lstclear(&new_list, del);
 			return (NULL);
 		}
-		ft_lstadd_back(&new_list, new_node);
+		if (!new_list)
+			new_list = new_node;
+		else
+			last_node -> next = new_node;
+		last_node = new_node;
 		lst = lst->next;
 	}
 	return (new_list);
@@ -85,5 +91,4 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 // 	printf("NULL\n");
 // 	ft_lstclear(&new_list, del);
 // 	ft_lstclear(&head, del);
-
 // }

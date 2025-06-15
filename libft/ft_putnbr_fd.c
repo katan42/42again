@@ -6,7 +6,7 @@
 /*   By: ka-tan <ka-tan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 21:16:39 by ka-tan            #+#    #+#             */
-/*   Updated: 2025/05/19 19:20:20 by ka-tan           ###   ########.fr       */
+/*   Updated: 2025/06/12 17:29:36 by ka-tan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,12 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	ft_putchar_fd((n % 10) + '0', fd);
 }
-/*
-int main(void)
-{
-	int	x;
 
-	x = -12345;
-	ft_putnbr_fd(x, 1);
-	return (0);
-}
-*/
+// int main(void)
+// {
+// 	int	x;
+
+// 	x = -12345;
+// 	ft_putnbr_fd(x, 1);
+// 	return (0);
+// }

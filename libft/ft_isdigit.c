@@ -6,7 +6,7 @@
 /*   By: ka-tan <ka-tan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 13:39:25 by ka-tan            #+#    #+#             */
-/*   Updated: 2025/06/10 21:03:03 by ka-tan           ###   ########.fr       */
+/*   Updated: 2025/06/12 19:15:47 by ka-tan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,15 @@ int	ft_isdigit(int c)
 
 // int main(void)
 // {
-// 	char    str1[] = "a";
-// 	char    str2[] = "B";
-// 	char    str3[] = "1";
-// 	char    str4[] = "1d";
-// 	char    str5[] = "$123&*7";
-// 	char    str6[] = "@";
-// 	char    str7[] = ")";
-// 	char    str8[] = "ABCDEFZ";
-// 	char    str9[] = "ABCDEZ0";
+// 	char	str1[] = "a";
+// 	char	str2[] = "B";
+// 	char	str3[] = "1";
+// 	char	str4[] = "1d";
+// 	char	str5[] = "$123&*7";
+// 	char	str6[] = "@";
+// 	char	str7[] = ")";
+// 	char	str8[] = "ABCDEFZ";
+// 	char	str9[] = "ABCDEZ0";
 
 // 	printf("a: %d\n", ft_isdigit(str1[0]));
 // 	printf("B: %d\n", ft_isdigit(str2[0]));

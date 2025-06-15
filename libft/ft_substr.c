@@ -6,7 +6,7 @@
 /*   By: ka-tan <ka-tan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 21:12:36 by ka-tan            #+#    #+#             */
-/*   Updated: 2025/05/16 21:12:39 by ka-tan           ###   ########.fr       */
+/*   Updated: 2025/06/12 19:08:26 by ka-tan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,20 +32,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(str, s + start, len + 1);
 	return (str);
 }
-/*
-int main(void) 
-{
-	const char* text = "Hello, world!";
-	int start = 0;
-	int length = 5;
 
-	char* result = ft_substr("tripouille", 0, 42000);
-	if (result != NULL) {
-	printf("Substring: %s\n", result);
-	free(result); // Free the allocated memory
-	} else {
-	printf("Invalid substring parameters.\n");
-	}
-    return 0;
-}
-*/
+// int main(void) 
+// {
+// 	char* result = ft_substr("tripouille", 4, 42000);
+
+// 	printf("Substring: %s\n", result);
+// 	free(result);
+// 	return (0);
+// }

@@ -6,7 +6,7 @@
 /*   By: ka-tan <ka-tan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 17:42:37 by ka-tan            #+#    #+#             */
-/*   Updated: 2025/06/10 19:43:05 by ka-tan           ###   ########.fr       */
+/*   Updated: 2025/06/12 19:26:38 by ka-tan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,11 @@ void	*ft_calloc(size_t nmemb, size_t size)
 // 		printf("Memory allocation failed.\n");
 // 		return 1;
 // 	}
-//     while (i < num_elements) 
+// 	while (i < num_elements) 
 // 	{
 // 		i++;
 // 		printf("array[%zu] = %d\n", i, array[i]);
-//     }
-//     free(array);
-//     return 0;
+// 	}
+// 	free(array);
+// 	return 0;
 // }
