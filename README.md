@@ -14,7 +14,7 @@ Welcome to my personal archive of projects completed at [42 Singapore](https://4
 
 | Project         | Description                                      |
 |----------------|--------------------------------------------------|
-| [libft](./Libft/)         | Re-implementing essential C standard functions       |
+| [libft](./00_libft/)         | Re-implementing essential C standard functions       |
 
 
 > 📌 Each folder contains its own `README.md` with more details
