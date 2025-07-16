@@ -15,6 +15,8 @@ Welcome to my personal archive of projects completed at [42 Singapore](https://4
 | Project         | Description                                      |
 |----------------|--------------------------------------------------|
 | [libft](./00_libft/)         | Re-implementing essential C standard functions       |
+| [ft_printf](./01_ft_printf/)         | Custom `printf` implementation with format specifiers       |
+
 
 
 > 📌 Each folder contains its own `README.md` with more details
@@ -33,7 +35,7 @@ Welcome to my personal archive of projects completed at [42 Singapore](https://4
 ## 🚧 Ongoing Work
 
 I'm continuing to polish key projects and exploring new ones as part of the Core Curriculum, including:
-- `libft` – Reimplementing essential C standard functions
+- `get next line` – Line-by-line file reading using static buffers
 
 ---
 
