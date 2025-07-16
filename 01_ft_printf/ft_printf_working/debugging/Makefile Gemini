@@ -1,0 +1,17 @@
+NAME = libftprintf.a
+SRC = ./src/ft_printchar.c ./src/ft_printstr.c ./src/ft_print_ptr.c ./src/ft_print_nbr.c ./src/ft_print_unsigned_nbr.c ./src/ft_print_hex.c ./src/ft_printf.c
+
+OBJ = $(SRC:.c=.o)
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+    ar rcs $(NAME) $(OBJ)
+    ranlib $(NAME)
+
+src/%.o: src/%.c
+    $(CC) $(CFLAGS) -c $< -o $@
+
+.PHONY: all

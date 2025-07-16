@@ -1,0 +1,43 @@
+.PHONY: all clean fclean re
+.DEFAULT_GOAL := all
+
+NAME = libftprintf.a
+LIBFT_DIR = ./libft
+
+SRC = ./src/ft_printchar.c ./src/ft_printstr.c ./src/ft_print_ptr.c ./src/ft_print_nbr.c \
+	./src/ft_print_unsigned_nbr.c ./src/ft_print_hex.c ./src/ft_printf.c
+
+OBJ = $(SRC:.c=.o)
+DEP = $(OBJ:.o=.d)
+
+-include $(DEP)
+
+CC = cc
+INCLUDE = -I./include -I$(LIBFT_DIR)
+CFLAGS = -Wall -Wextra -Werror -MMD -MP $(INCLUDE)
+
+# ✅ FIRST target: 'all' (make will always start here)
+all: $(NAME)
+	@echo "✔️  Build complete: $(NAME)"
+
+$(NAME): $(OBJ) $(LIBFT_DIR)/libft.a
+	@ar rcs $(NAME) $(OBJ)
+	@ranlib $(NAME)
+
+src/%.o: src/%.c
+	@$(CC) $(CFLAGS) -c $< -o $@
+
+$(LIBFT_DIR)/libft.a:
+	@$(MAKE) -C $(LIBFT_DIR)
+
+clean:
+	@echo "🧹 Cleaning object and dependency files"
+	@rm -f $(OBJ) $(DEP)
+	@$(MAKE) -C $(LIBFT_DIR) clean
+
+fclean: clean
+	@echo "🧨 Removing static libraries"
+	@rm -f $(NAME)
+	@$(MAKE) -C $(LIBFT_DIR) fclean
+
+re: fclean all
