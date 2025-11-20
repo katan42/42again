@@ -1,0 +1,9 @@
+# Ignore all VS Code files
+.vscode/
+
+# Ignore all .DS_Store (macOS, metadata about how the folder should be displayed)
+.DS_Store
+
+# Ignore compiled files
+*.o
+a.out
