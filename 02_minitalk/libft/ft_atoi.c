@@ -6,11 +6,24 @@
 /*   By: ka-tan <ka-tan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 13:26:54 by ka-tan            #+#    #+#             */
-/*   Updated: 2025/11/18 18:42:09 by ka-tan           ###   ########.fr       */
+/*   Updated: 2025/11/21 16:07:37 by ka-tan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static long	check_sign_and_skip(size_t *i, const char *str, long sign)
+{
+	while ((str[*i] == 32) || (str[*i] >= 9 && str[*i] <= 13))
+		(*i)++;
+	if (str[*i] == '-' || str[*i] == '+')
+	{
+		if (str[*i] == '-')
+			sign = sign * -1;
+		(*i)++;
+	}
+	return (sign);
+}
 
 int	ft_atoi(const char *str)
 {
@@ -21,21 +34,22 @@ int	ft_atoi(const char *str)
 	i = 0;
 	result = 0;
 	sign = 1;
-	while ((str[i] == 32) || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
-			sign = sign * -1;
-		i++;
-	}
+	sign = check_sign_and_skip(&i, str, sign);
 	while (str[i] >= '0' && str[i] <= '9')
 	{
+		if (result > INT_MAX / 10
+			|| (result == INT_MAX / 10 && (str[i] - '0') > INT_MAX % 10))
+		{
+			if (sign == 1)
+				return (INT_MAX);
+			return (INT_MIN);
+		}
 		result = result * 10 + (str[i] - '0');
 		i++;
 	}
 	return (sign * result);
 }
+
 // int	main(void)
 // {
 // 	char	str1[] = "     123";
@@ -56,5 +70,22 @@ int	ft_atoi(const char *str)
 // 	printf("+++--8987: %d\n", ft_atoi(str5));
 // 	printf("+++--8987: %d\n", atoi(str5));
 // 	printf("4547545+-+-: %d\n", ft_atoi(str6));
-// 	printf("4547545+-+-: %d\n", atoi(str6));
+// 	printf("4547545+-+-: %d\n\n", atoi(str6));
+// 	printf("INT_MAX: %d\n", ft_atoi("2147483647"));
+// 	printf("INT_MAX: %d\n", atoi("2147483647"));
+// 	printf("INT_MIN: %d\n", ft_atoi("-2147483648"));
+// 	printf("INT_MIN: %d\n\n", atoi("-2147483648"));
+// 	// borderline
+// 	printf("MAX borderline: %d\n", ft_atoi("2147483646"));
+// 	printf("MAX borderline: %d\n", atoi("2147483646"));
+// 	printf("MIN borderline: %d\n", ft_atoi("-2147483647"));
+// 	printf("MIN borderline: %d\n\n", atoi("-2147483647"));
+// 	// Positive overflow
+// 	printf("Overflow +1: %d\n", ft_atoi("2147483648"));
+// 	printf("Overflow +2: %d\n", ft_atoi("9999999999"));
+// 	printf("Overflow +3: %d\n", ft_atoi("3000000000"));
+// 	// Negative overflow
+// 	printf("Overflow -1: %d\n", ft_atoi("-2147483649"));
+// 	printf("Overflow -2: %d\n", ft_atoi("-9999999999"));
+// 	printf("Overflow -3: %d\n", ft_atoi("-3000000000"));
 // }
