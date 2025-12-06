@@ -90,7 +90,7 @@ to run:
 # Mandelbrot
 ./fractol_bonus mandelbrot
 ```
-<video src="fractol mandelbrot+arrow+zoom.mp4" width="600" autoplay loop muted></video>
+<video src="eg_fractol_mandelbrot+arrow+zoom.mp4" width="600" autoplay loop muted></video>
 
 ```bash
 # Julia fractal
@@ -98,13 +98,13 @@ to run:
 # Example:
 ./fractol_bonus julia -0.4 0.6
 ```
-<video src="eg fractol julia -0.8 0.156+zoom.mp4" width="600" autoplay loop muted></video>
+<video src="eg_fractol_julia_-0.8_0.156+zoom" width="600" autoplay loop muted></video>
 
 ```bash
 # Newton fractal
 ./fractol_bonus newton
 ```
-<video src="eg fractol newton + colour range shift+zoom.mp4" width="600" autoplay loop muted></video>
+<video src="eg_fractol_newton_+_colour_range_shift+zoom.mp4" width="600" autoplay loop muted></video>
 
 ---
 
@@ -123,7 +123,7 @@ Inside the fractal window:
 - **Zoom limits**  
   Based on feedback from peers, I added minimum and maximum zoom values so you can’t zoom so far out that the fractal becomes a blob, or so far in that floating-point precision breaks the image. This keeps navigation stable and user-friendly.
 
-  <video src="eg fractol mandelbrot+zoom_limit.mp4" width="600" autoplay loop muted></video>
+  <video src="eg_fractol_mandelbrot+zoom_limit.mp4" width="600" autoplay loop muted></video>
 
 - **Max iterations vs performance**  
   The `max iteration` count (max_iter) controls:
