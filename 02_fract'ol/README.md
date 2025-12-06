@@ -100,7 +100,7 @@ to run:
 ```
 ### Julia Fractal Demo
 
-![Julia fractal gif](assets/eg_fractol_julia_-0.8_0.156+zoom.gif)
+![Julia fractal gif](eg_fractol_julia_-0.8_0.156+zoom.gif)
 
 
 ```bash
