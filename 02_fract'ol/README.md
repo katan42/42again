@@ -98,7 +98,10 @@ to run:
 # Example:
 ./fractol_bonus julia -0.4 0.6
 ```
-<video src="eg_fractol_julia_-0.8_0.156+zoom" width="600" autoplay loop muted></video>
+### Julia Fractal Demo
+
+![Julia fractal gif](assets/eg_fractol_julia_-0.8_0.156+zoom.gif)
+
 
 ```bash
 # Newton fractal
