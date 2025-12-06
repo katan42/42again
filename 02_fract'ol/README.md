@@ -90,7 +90,7 @@ to run:
 # Mandelbrot
 ./fractol_bonus mandelbrot
 ```
-##### Mandelbrot Fractal Demo
+##### Mandelbrot Fractal Demo (also showing the arrow keys and zoom)
 ![Mandelbrot fractal gif](eg_fractol_mandelbrot+arrow+zoom.gif)
 
 ```bash
@@ -99,14 +99,14 @@ to run:
 # Example:
 ./fractol_bonus julia -0.4 0.6
 ```
-##### Julia Fractal Demo
+##### Julia Fractal Demo (also showing the zoom)
 ![Julia fractal gif](eg_fractol_julia_-0.8_0.156+zoom.gif)
 
 ```bash
 # Newton fractal
 ./fractol_bonus newton
 ```
-##### Newton Fractal Demo
+##### Newton Fractal Demo (also showing colour range shift and zoom)
 ![Newton fractal gif](eg_fractol_newton_+_colour_range_shift+zoom.gif)
 
 ---
