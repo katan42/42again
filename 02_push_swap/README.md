@@ -135,6 +135,7 @@ to randomly generate integers between 0 to INT_MAX with n=500
 ./push_swap `shuf -r -i 0-2147483647 -n 500
 to run checker
 ```
+to run the checker in bash shell
 ```bash
 ARG="4 67 3 87 23"
 ./push_swap $ARG | ./checker_linux $ARG
